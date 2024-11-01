@@ -1,0 +1,265 @@
+// Custom.scss
+
+$primary: #277e8b;
+$secondary: #B1360D;
+$danger: #771a16;
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../../node_modules/bootstrap/scss/utilities/api";
+
+// additionally imported classes from `bootstrap´
+//@import "../../node_modules/bootstrap/scss/card";
+//@import "../../node_modules/bootstrap/scss/forms";
+//@import "../../node_modules/bootstrap/scss/buttons";
+//@import "../../node_modules/bootstrap/scss/navbar";
+//@import "../../node_modules/bootstrap/scss/nav";
+//@import "../../node_modules/bootstrap/scss/dropdown";
+//@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/bootstrap"; 
+
+// 8. Add additional custom code here
+/* 
+$navbar-bg: #ab0000; // Change navbar background color
+$navbar-text-color: #a40000; // Change navbar text color
+$navbar-hover-bg: #cf0707; // Change navbar background color on hover
+$navbar-hover-text-color: #bc0000; // Change navbar text color on hover
+
+// Tab customization
+$nav-link-hover-bg: #cc0000; // Change tab background color on hover
+$nav-link-hover-color: #c90000; // Change tab text color on hover */
+
+/* $navbar-background-color: #ff0000;
+$navbar-link-color: #ff0000;
+$navbar-height: 50px; */
+
+$primary-text-color: #0e262b;
+$primary-button-border-color: #0b5b6d;
+$primary-button-color: #0B7992;
+$primary-module-header-color: #3e95a8;
+$primary-module-border-color: #63b1c3;
+$primary-header-color: #d8e4e6;
+$primary-sub-header-color: #edf2f3;
+$primary-lighter-header-color: lighten($primary-header-color, 8%);
+
+$label-font-size: 10px; // Change the label font size to 14px
+
+label {
+  font-size: 14px; // Adjust the font size as needed
+}
+
+.btn-primary {
+    color: white;
+    background-color: $primary-button-color; // Apply the custom primary color to the primary button
+    border-color: $primary-button-border-color; // Apply the same color to the button border
+  }
+
+.btn-secondary {
+    color: white;
+    background-color: $secondary; // Apply the custom primary color to the primary button
+    border-color: darken($secondary, 10%); // Apply the same color to the button border
+  }
+
+
+.card {
+  margin: 0;
+}
+
+.card-header {
+    background-color: $primary-header-color;
+}
+  
+//$navbar-background-color: #cbdce0; // New background color for the navbar
+$navbar-link-color: #657e83; // New color for the navbar links
+$navbar-link-hover-color: #0d2023; // New hover color for the navbar links
+
+.navbar {
+  background-color: $primary-header-color;
+  .nav-link {
+    color: $navbar-link-color;
+    &:hover {
+      color: $navbar-link-hover-color;
+    }
+  }
+}
+
+.navbar-nav .nav-link {
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  background-color: $primary-button-color; /* Change to your desired background color */
+  color: #fff; /* Change to your desired text color */
+}
+
+.sub-nav {
+  background-color: $primary-sub-header-color;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.search-bar {
+  max-width: 800px
+}
+
+.dropdown-item {
+  color: $primary-text-color;
+  &:hover {
+  background-color: $primary-lighter-header-color;
+  }
+}
+
+.narrow-col {
+  width: 50px; /* Define the width of the column */
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa; /* Adjust as needed */
+}
+
+.table th {
+  background-color: $primary-module-header-color; // Change this to your desired header color
+  color: #fff; // Change this to your desired text color
+  font-weight: normal; // Remove bold font weight
+}
+
+.profile-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-image {
+  height: 150px;
+  width: 150px;
+  margin-left: 0px;
+}
+
+.profile-image-sm {
+  height: 80px;
+  width: 80px;
+  margin-left: 14px;
+}
+
+.profile-lower-right-button-lg {
+  position: absolute;
+  top: 190px;
+  left: 200px;
+  cursor: pointer;
+}
+
+.profile-lower-right-button {
+  position: absolute;
+  top: 106px;
+  left: 112px;
+  cursor: pointer;
+}
+
+.profile-lower-right-button-sm {
+  position: absolute;
+  top: 44px;
+  left: 64px;
+  cursor: pointer;
+}
+
+.label-container {
+  display: inline-block;
+  background-color: $primary-button-color;
+  color:#ffffff;
+  border-radius: 5px;
+  padding: 2px 4px 4px 8px;
+  margin-bottom: 5px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.duties-container {
+  margin-bottom: 10px;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.icon-small {
+  height: "50px";
+  width: "50px";
+}
+
+.hover-effect {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-effect:hover {
+  background-color: #ecf3f5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.Drop-zone {
+	height: 0px;
+	border-radius: 4px;
+	transition: height 0.2s ease, background-color 0.2s ease;
+}
+
+.Drop-zone-active {
+	background-color: lighten($primary-module-header-color, 20%);
+	height: 16px;
+	transition: height 0.2s ease, background-color 0.2s ease;
+}
+
+.Drop-zone-expanded {
+	background-color: $primary-module-header-color;
+	height: 28px;
+	transition: height 0.2s ease, background-color 0.2s ease;
+}
+
+.DraggedItem-inactive {
+	max-height: 5000px;
+	transition: max-height 0.4s ease;
+}
+
+.DraggedItem-active {
+	max-height: 130px;
+	transition: max-height 0.4s ease;
+	cursor: move;
+}
+
+.DraggedItem-active-small {
+	max-height: 98px;
+	transition: max-height 0.4s ease;
+	cursor: move;
+}
